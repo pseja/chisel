@@ -2,16 +2,16 @@
 	"schemaVersion": 1,
 	"id": "chisel",
 	"version": "${version}",
-	"name": "chisel",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Chisel",
+	"description": "Adds a Chisel that replaces the targeted block with the one in your off-hand.",
 	"authors": [
-		"Me!"
+		"pseja"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://pseja.github.io/",
+		"sources": "https://github.com/pseja/chisel"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/chisel/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -20,7 +20,10 @@
 		],
 		"fabric-datagen": [
 			"io.github.pseja.chisel.ChiselDataGenerator"
-		]
+		],
+        "client": [
+            "io.github.pseja.chisel.ChiselClient"
+        ]
 	},
 	"mixins": [
 		"chisel.mixins.json"
