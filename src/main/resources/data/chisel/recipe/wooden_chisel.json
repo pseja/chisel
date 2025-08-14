@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    " p",
+    "/ "
+  ],
+  "key": {
+    "p": {
+      "tag": "minecraft:planks"
+    },
+    "/": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "id": "chisel:wooden_chisel",
+    "count": 1
+  }
+}
