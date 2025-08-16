@@ -46,7 +46,7 @@ public class ChiselItem extends Item {
             return ActionResult.FAIL;
         }
 
-        if (!world.breakBlock(clickedBlockPos, true, player)) {
+        if (!world.breakBlock(clickedBlockPos, !player.isCreative(), player)) {
             return ActionResult.FAIL;
         }
         blockItem.place(
