@@ -1,5 +1,8 @@
 package io.github.pseja.chisel.item.custom;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.*;
@@ -37,6 +40,12 @@ public class ChiselItem extends Item {
         }
 
         BlockPos clickedBlockPos = context.getBlockPos();
+
+        Block clickedBlock = world.getBlockState(clickedBlockPos).getBlock();
+        if (clickedBlock == Blocks.BEDROCK && !player.isCreative()) {
+            return ActionResult.FAIL;
+        }
+
         if (!world.breakBlock(clickedBlockPos, true, player)) {
             return ActionResult.FAIL;
         }
